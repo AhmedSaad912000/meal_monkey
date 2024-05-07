@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'views/auth/new_password/view.dart';
+import 'views/auth/on_boarding/view.dart';
 import 'views/auth/otp/view.dart';
-import 'views/auth/reset_password/view.dart';
 void main(){
   runApp(const MyApp());
 }
@@ -23,7 +24,6 @@ class MyApp extends StatelessWidget {
               fixedSize: Size.fromHeight(56.h),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(28.r),
-
               )
             )
           ),
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
         ),
         home:child
       ),
-      child:OTPView(),
+      child:OnBoardingView(),
     );
   }
 }

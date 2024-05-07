@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_monkey/core/design/app_input.dart';
 import 'package:meal_monkey/core/design/input_validation.dart';
 import 'package:meal_monkey/core/design/my_appbar.dart';
+import 'package:meal_monkey/views/auth/components/auth_header.dart';
 
 import '../../../core/design/fill_button.dart';
 
@@ -27,19 +28,7 @@ class _SignUpViewState extends State<SignUpView> {
           key:formKey ,
           child: Column(
             children: [
-              SizedBox(
-                height: 12.h,
-              ),
-              Text(
-                'Add your details to sign up',
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff7C7D7E)),
-              ),
-              SizedBox(
-                height: 36.h,
-              ),
+             AuthHeader(text: 'Add your details to sign up'),
               AppInput(
                 labelText: 'Name',
                 validator: InputValidator.user,

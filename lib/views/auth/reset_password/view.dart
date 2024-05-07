@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_monkey/core/design/my_appbar.dart';
+import 'package:meal_monkey/views/auth/components/auth_header.dart';
 
 import '../../../core/design/app_input.dart';
 import '../../../core/design/fill_button.dart';
@@ -24,20 +25,7 @@ class _RestPasswordViewState extends State<RestPasswordView> {
           key: formKey,
           child: Column(
             children: [
-              SizedBox(
-                height: 12.h,
-              ),
-              Text(
-                'Please enter your email to receive a \nlink to create a new password via email',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff7C7D7E)),
-              ),
-              SizedBox(
-                height: 36.h,
-              ),
+             AuthHeader(text: 'Please enter your email to receive a \nlink to create a new password via email'),
               AppInput(
                 validator: InputValidator.email,
                 labelText: 'Email',

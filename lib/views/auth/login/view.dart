@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meal_monkey/core/design/app_input.dart';
 import 'package:meal_monkey/core/design/input_validation.dart';
 import 'package:meal_monkey/core/design/my_appbar.dart';
+import 'package:meal_monkey/views/auth/components/auth_header.dart';
 import '../../../core/design/app_image.dart';
 import '../../../core/design/fill_button.dart';
 part 'components/item.dart';
@@ -25,19 +26,7 @@ class _LoginViewState extends State<LoginView> {
           key: formKey,
           child: Column(
             children: [
-              SizedBox(
-                height: 12.h,
-              ),
-              Text(
-                'Add your details to login',
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xff7C7D7E)),
-              ),
-              SizedBox(
-                height: 36.h,
-              ),
+              AuthHeader(text: 'Add your details to login'),
               AppInput(
                 validator: InputValidator.email,
                 labelText: 'Your Email',
