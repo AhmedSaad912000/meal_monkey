@@ -8,9 +8,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding:  EdgeInsetsDirectional.only(start: 17.w,top:  12.h),
+        padding:  EdgeInsetsDirectional.symmetric(horizontal: 8.w,vertical: 16.h),
         child: Center(
-          child: Text(text,style: TextStyle(
+          child: Text(text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
             fontSize: 30.sp,
             fontWeight: FontWeight.w800,
             fontFamily: 'Metropolis',
@@ -22,5 +24,5 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(50.h);
+  Size get preferredSize => Size.fromHeight(120.h);
 }

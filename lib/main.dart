@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'views/auth/otp/view.dart';
 import 'views/auth/reset_password/view.dart';
 void main(){
   runApp(const MyApp());
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
         ),
         home:child
       ),
-      child:RestPasswordView(),
+      child:OTPView(),
     );
   }
 }
